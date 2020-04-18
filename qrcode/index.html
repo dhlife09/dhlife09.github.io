@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Scanner Demo</title>
+</head>
+<body>
+<style>
+    canvas {
+        display: none;
+    }
+    hr {
+        margin-top: 32px;
+    }
+    input[type="file"] {
+        display: block;
+        margin-bottom: 16px;
+    }
+    div {
+        margin-bottom: 16px;
+    }
+    img {
+        image-orientation: from-image;
+    }
+</style>
+<div id="cam-section">
+    <h1>Scan from WebCam:</h1>
+    <div>
+        <video muted autoplay playsinline id="qr-video"></video>
+        
+    </div>
+    <div>
+        <input type="checkbox" id="debug-checkbox">
+        <span>Show debug image</span>
+    </div>
+    <b>Detected QR code: </b>
+    <span id="cam-qr-result">None</span>
+    <hr>
+</div>
+<canvas id="debug-canvas"></canvas>
+<div id="file-section">
+    <h1>Take a Photo and Scan 1:</h1>
+    <input type="file" id="file-selector" accept="image/*">
+    <b>Detected QR code: </b>
+    <span id="file-qr-result">None</span>
+</div>
+
+<script src="../libraries/exif.min.js"></script>
+<script type="module">
+    import QrScanner from "../libraries/qr-scanner/qr-scanner.min.js";
+    const video = document.getElementById('qr-video');
+    const debugCheckbox = document.getElementById('debug-checkbox');
+    const debugCanvas = document.getElementById('debug-canvas');
+    const debugCanvasContext = debugCanvas.getContext('2d');
+    const camQrResult = document.getElementById('cam-qr-result');
+    const fileSelector = document.getElementById('file-selector');
+    const fileQrResult = document.getElementById('file-qr-result');
+    function setResult(label, result) {
+        label.textContent = result;
+        label.style.color = 'teal';
+        clearTimeout(label.highlightTimeout);
+        label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+    }
+    if (navigator.mediaDevices) {
+        // ####### Web Cam Scanning #######
+        document.getElementById("file-section").style.display = "none";
+        const scanner = new QrScanner(video, result => setResult(camQrResult, result));
+        scanner.start();
+
+        // ####### debug mode related code #######
+        debugCheckbox.addEventListener('change', () => setDebugMode(debugCheckbox.checked));
+        function setDebugMode(isDebug) {
+            const worker = scanner._qrWorker;
+            worker.postMessage({
+                type: 'setDebug',
+                data: isDebug
+            });
+            if (isDebug) {
+                debugCanvas.style.display = 'block';
+                worker.addEventListener('message', handleDebugImage);
+            } else {
+                debugCanvas.style.display = 'none';
+                worker.removeEventListener('message', handleDebugImage);
+            }
+        }
+        function handleDebugImage(event) {
+            const type = event.data.type;
+            if (type === 'debugImage') {
+                const imageData = event.data.data;
+                if (debugCanvas.width !== imageData.width || debugCanvas.height !== imageData.height) {
+                    debugCanvas.width = imageData.width;
+                    debugCanvas.height = imageData.height;
+                }
+                debugCanvasContext.putImageData(imageData, 0, 0);
+            }
+        }
+    } else {
+        // ####### File Scanning #######
+        document.getElementById("cam-section").style.display = "none";
+
+        function drawImage(imageObj) {
+
+            debugCanvas.style.display = 'block';
+            var x = 250;
+            var y = 250;
+            
+            var maxsize = x;
+            var w = maxsize;
+            var ratio = (x / w);
+            var h = (y / ratio);
+            debugCanvas.width = w;
+            debugCanvas.height = h;
+            
+            EXIF.getData(imageObj, function() {
+                var orientation = EXIF.getTag(imageObj, "Orientation");
+                if(orientation == 6) {
+                    debugCanvas.width = h;
+                    debugCanvas.height = w;
+                    debugCanvasContext.translate(h, 0);
+                    debugCanvasContext.rotate( (90 * Math.PI) / 180);
+                }
+            })
+            debugCanvasContext.drawImage(imageObj,0,0,w,h);
+            
+            var imageData = debugCanvasContext.getImageData(0, 0, x, y);
+            var data = imageData.data;
+
+            for(var i = 0; i < data.length; i += 4) {
+                var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2];
+                // red
+                data[i] = brightness;
+                // green
+                data[i + 1] = brightness;
+                // blue
+                data[i + 2] = brightness;
+            }
+
+            // overwrite original image
+            debugCanvasContext.putImageData(imageData, 0, 0);
+
+            setTimeout(function(){
+                QrScanner.scanImage(debugCanvas)
+                    .then(result => setResult(fileQrResult, result))
+                    .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+            })
+        }
+
+        fileSelector.addEventListener('change', event => {
+            const file = fileSelector.files[0];
+            if (!file) {
+                return;
+            }
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var imageObj = new Image();
+                    imageObj.onload = function() {
+                        drawImage(this);
+                    };
+                    imageObj.src = e.target.result;
+                    
+                    
+                }
+
+                reader.readAsDataURL(file);
+            }
+            
+        });
+    }
+</script>
+</body>
+</html>
