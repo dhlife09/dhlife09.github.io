@@ -206,6 +206,7 @@
 						<p><a href="https://corona-19.kr/" class="float-left">후이즈검색</a></p><br>
 						<p>도메인 주소를 입력해서 후이즈 정보를 확인하세요. 호스팅케이알 후이즈로 연결됩니다.</p>
 						<div class="alert alert-danger">
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						  <strong>ERROR</strong> 도메인을 입력하세요.
 						</div>
 						<form class="form-inline my-2 my-lg-0">
@@ -251,6 +252,13 @@
 			document.getElementById("domain").value = null;
 			return false;
 		  }
+		  
+		  window.setTimeout(function() {
+			$(".alert").fadeTo(500, 0).slideUp(500, function(){
+			$(this).remove(); 
+			});
+		  }, 2000);
+		  
 	</script>
 	  </body>
 </html>
