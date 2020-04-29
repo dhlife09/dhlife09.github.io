@@ -205,7 +205,7 @@
 						<p><a href="https://corona-19.kr/" class="float-left">후이즈검색</a></p><br>
 						<p>도메인 주소를 입력해서 후이즈 정보를 확인하세요. 호스팅케이알 후이즈로 연결됩니다.</p>
 						<form class="form-inline my-2 my-lg-0">
-						  <input name="domain" type="text" class="form-control mr-sm-2" placeholder="Domain Address">
+						  <input id="domain" name="domain" type="text" class="form-control mr-sm-2" placeholder="Domain Address">
 						  <button onclick="javascript:whois();" class="btn btn-outline-primary my-2 my-sm-0" type="button" target="_blank">Search</button>
 						</form>
 
@@ -230,8 +230,7 @@
 	<script src="/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 	<script>
 		  function whois() {
-			const frm = document.frm;
-			const domain_name = frm.domain.value;
+			var domain_name = document.getElementById("domain").value;
 
 			if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
 				alert("도메인을 입력하세요.");
