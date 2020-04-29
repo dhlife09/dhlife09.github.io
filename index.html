@@ -205,7 +205,7 @@
 					<li>
 						<p><a href="https://corona-19.kr/" class="float-left">후이즈검색</a></p><br>
 						<p>도메인 주소를 입력해서 후이즈 정보를 확인하세요. 호스팅케이알 후이즈로 연결됩니다.</p>
-						<div id="warn1" class="alert alert-danger" style="display:none">
+						<div id="warning" class="alert alert-danger" style="display:none">
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						  <strong>ERROR</strong> 도메인을 입력하세요.
 						</div>
@@ -238,9 +238,9 @@
 
 			if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
 				//alert("도메인을 입력하세요.");
-				document.getElementById("warn1").style.display = "block";
+				document.getElementById("warning").style.display = "block";
 				setTimeout(function() {
-					document.getElementById("warn1").style.display = "none";
+					document.getElementById("warning").style.display = "none";
 				}, 3000);
 
 				return;
