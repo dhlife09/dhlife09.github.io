@@ -237,8 +237,12 @@
 			var domain_name = document.getElementById("domain").value;
 
 			if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
-				alert("도메인을 입력하세요.");
+				//alert("도메인을 입력하세요.");
 				document.getElementById("warn1").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("warn1").style.display = "none";
+				}, 3000);
+
 				return;
 			}
 
