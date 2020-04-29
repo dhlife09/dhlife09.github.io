@@ -231,25 +231,25 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 			  <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 			  <script>
-				  function whoIs() {
-				const frm = document.frm;
-				const domain_name = frm.domain.value;
+				  function whois() {
+					const frm = document.frm;
+					const domain_name = frm.domain.value;
 
-				if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
-					alert("도메인을 입력하세요.");
-					return;
-				}
+					if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
+						alert("도메인을 입력하세요.");
+						return;
+					}
 
-				if (domain_name.indexOf(".") === -1) {
-					alert("도메인을 정확히 입력하세요.");
-					return;
-				}
+					if (domain_name.indexOf(".") === -1) {
+						alert("도메인을 정확히 입력하세요.");
+						return;
+					}
 
-				const options = "scrollbars=yes,toolbar=no,location=no,status=yes,menubar=no,resizable=no,width=533,height=663,left=0,top=0";
-				const url = "http://www.hosting.kr/servlet/popupSvl?cmd=WHOIS_POPUP&text=" + domain_name;
-				window.open(url, "whois_win", options);
-				return false;
-			}
+					const options = "scrollbars=yes,toolbar=no,location=no,status=yes,menubar=no,resizable=no,width=533,height=663,left=0,top=0";
+					const url = "http://www.hosting.kr/servlet/popupSvl?cmd=WHOIS_POPUP&text=" + domain_name;
+					window.open(url, "whois_win", options);
+					return false;
+				  }
 			</script>
 	  </body>
 </html>
