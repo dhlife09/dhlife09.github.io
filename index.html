@@ -235,6 +235,9 @@
 					<li>
 						<p><a href="https://wepplication.github.io/tools/beautifyCode/" class="float-left">웹 소스코드 정렬 사이트</a></p>
 					</li>
+					<li>
+						<p><a class="float-left" onclick="copy('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">')">BootstrapCDN(HTML) 복사하기</a></p>
+					</li>
 				</ul>
 		  </div>
 		</div>
@@ -297,6 +300,16 @@
 			document.getElementById("domain").value = null;
 			return false;
 		  }
+		  
+		function copy(val) {
+			  var dummy = document.createElement("textarea");
+			  document.body.appendChild(dummy);
+			  dummy.value = val;
+			  dummy.select();
+			  document.execCommand("copy");
+			  document.body.removeChild(dummy);
+			  swal("복사되었습니다!", "클립보드에 복사되었습니다!", "success");
+			}
 	</script>
-	  </body>
+  </body>
 </html>
