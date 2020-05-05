@@ -332,10 +332,10 @@
 				return;
 			}
 
-			if (checkUrlForm(url_addr) === true) {
-				alert('pass');
+			if (checkUrlForm(url_addr) != true) {
+				alert('ERROR');
 			}
-
+			
 			const options = "";
 			const url = "http://webcache.googleusercontent.com/search?q=cache:" + url_addr;
 			window.open(url, "gcache_win", options);
