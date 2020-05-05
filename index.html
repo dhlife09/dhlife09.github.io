@@ -241,6 +241,15 @@
 						</form>
 					</li>
 					<li>
+						<p><a href="https://google.com/" class="float-left">구글 캐시 검색</a></p><br>
+						<p>URL을 입력해서 구글 캐시 정보를 확인하세요. 구글 캐시 페이지로 연결됩니다.</p>
+						<form class="form-inline my-2 my-lg-0" action="javascript:gcache();">
+						  <!-- input hidden="hidden" / -->
+						  <input id="url" type="text" class="form-control mr-sm-2" placeholder="URL Address" autocomplete="off">
+						  <button onclick="javascript:gcache();" class="btn btn-outline-primary my-2 my-sm-0" type="button" target="_blank">Search</button>
+						</form>
+					</li>
+					<li>
 						<p><a href="https://wepplication.github.io/tools/beautifyCode/" class="float-left">웹 소스코드 정렬 사이트</a></p><br>
 					</li>
 					<li>
@@ -312,6 +321,38 @@
 			const url = "http://www.hosting.kr/servlet/popupSvl?cmd=WHOIS_POPUP&text=" + domain_name;
 			window.open(url, "whois_win", options);
 			document.getElementById("domain").value = null;
+			return false;
+		  }
+		  
+		  function gcache() {
+			var domain_name = document.getElementById("url").value;
+
+			if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
+				alert("도메인을 입력하세요.");
+				/*
+				document.getElementById("warn1").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("warn1").style.display = "none";
+				}, 3000);
+				*/
+				return;
+			}
+
+			if (domain_name.indexOf(".") === -1) {
+				alert("도메인을 정확히 입력하세요.");
+				/*
+				document.getElementById("warn2").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("warn2").style.display = "none";
+				}, 3000);
+				*/
+				return;
+			}
+
+			//const options = "scrollbars=yes,toolbar=no,location=no,status=yes,menubar=no,resizable=no,width=533,height=663,left=0,top=0";
+			const url = "http://webcache.googleusercontent.com/search?q=cache:" + domain_name;
+			window.open(url, "whois_win", options);
+			document.getElementById("url").value = null;
 			return false;
 		  }
 		  
