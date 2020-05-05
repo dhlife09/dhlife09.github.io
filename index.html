@@ -325,33 +325,16 @@
 		  }
 		  
 		  function gcache() {
-			var domain_name = document.getElementById("url").value;
+			var url_addr = document.getElementById("url").value;
 
-			if (domain_name === "" || domain_name.indexOf("�~X~H)") !== -1) {
-				alert("도메인을 입력하세요.");
-				/*
-				document.getElementById("warn1").style.display = "block";
-				setTimeout(function() {
-					document.getElementById("warn1").style.display = "none";
-				}, 3000);
-				*/
+			if (url_addr === "" || url_addr.indexOf("�~X~H)") !== -1) {
+				alert("URL을 입력하세요.");
 				return;
 			}
 
-			if (domain_name.indexOf(".") === -1) {
-				alert("도메인을 정확히 입력하세요.");
-				/*
-				document.getElementById("warn2").style.display = "block";
-				setTimeout(function() {
-					document.getElementById("warn2").style.display = "none";
-				}, 3000);
-				*/
-				return;
-			}
-
-			//const options = "scrollbars=yes,toolbar=no,location=no,status=yes,menubar=no,resizable=no,width=533,height=663,left=0,top=0";
-			const url = "http://webcache.googleusercontent.com/search?q=cache:" + domain_name;
-			window.open(url, "whois_win", options);
+			const options = "";
+			const url = "http://webcache.googleusercontent.com/search?q=cache:" + url_addr;
+			window.open(url, "gcache_win", options);
 			document.getElementById("url").value = null;
 			return false;
 		  }
