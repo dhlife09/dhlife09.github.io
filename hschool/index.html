@@ -72,10 +72,13 @@
 	<script src="assets/js/script.min.js"></script>
 	<script>
 		function download() {
-			 var url_addr = document.getElementById("category1").value;
+			 var year = document.getElementById("year").value;
+			 var month = document.getElementById("month").value;
+			 var category1 = document.getElementById("category1").value;
+			 var category2 = document.getElementById("category2").value;
 			 
 			 const options = "";
-			 const url = "http://webcache.googleusercontent.com/search?q=cache:" + url_addr;
+			 const url = "https://dhlife09.github.io/hschool/" + year +"/" + category1 + "/" ;
 			 window.open(url, "gcache_win", options);
 			 document.getElementById("url").value = null;
 			 return false;
