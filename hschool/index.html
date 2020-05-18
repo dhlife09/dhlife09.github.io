@@ -41,9 +41,9 @@
 		<p style="margin: 8px;">년</p>
 		<select id="month" style="margin: 8px;font-family: 'Noto Sans KR', sans-serif;">
 			<optgroup label="월 선택">
-				<option value="3" selected="">3</option>
-				<option value="6">6</option>
-				<option value="9	">9</option>
+				<option value="03" selected="">3</option>
+				<option value="06">6</option>
+				<option value="09	">9</option>
 				<option value="11">11</option>
 			</optgroup>
 		</select>
@@ -63,7 +63,7 @@
 			<optgroup label="과목 선택">
 				<option value="시험" selected="">시험지</option>
 				<option value="정답">정답지</option>
-				<option value="듣기">듣기(영어)</option>
+				<!-- option value="듣기">듣기(영어)</option -->
 			</optgroup>
 		</select><a class="btn btn-primary" role="button" href="javascript:download();" style="padding: 8px;">내려받기</a>
 	</div>
@@ -78,7 +78,7 @@
 			 var category2 = document.getElementById("category2").value;
 			 
 			 const options = "";
-			 const url = "https://dhlife09.github.io/hschool/" + year +"/" + category1 + "/"  + category2 + "_" + category1 + "_" + month  + "월.pdf";
+			 const url = "https://dhlife09.github.io/hschool/h1/" + category2 + "/ " + category2 + "_"  + category1 + "_" + year + month  + ".pdf";
 			 window.open(url, "web_downloader", options);
 			 document.getElementById("url").value = null;
 			 return false;
