@@ -98,18 +98,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Dohyun Park"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "정보보안전문가의 꿈을 가지고 정보보안 분야를 주로 공부하고 있으며 프로그래밍, 영상미디어, IT 등 여러 분야에 관심을 가지고 활동하고 있는 고등학생 입니다."
   location         : "Somewhere"
-  email            :
+  email            : "dhlife09@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+       url: "mailto:dhlife09@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+       url: "https://dhlife09.codes"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -118,7 +118,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+       url: "https://github.com/dhlife09"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
