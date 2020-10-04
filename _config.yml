@@ -102,7 +102,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "프로그래밍, 영상미디어, IT 등 여러 분야에 관심을 가진 **정보보호전문가가 되고 싶은 고등학생** 입니다."
   location         : "Somewhere"
-  email            :
+  email            : "dhlife09@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
