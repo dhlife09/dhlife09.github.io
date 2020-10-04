@@ -106,10 +106,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:dhlife09@gmail.com"
+      # url: "https://your-website.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://dhlife09.codes"
+      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
