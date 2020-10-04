@@ -1,9 +1,9 @@
-
 ---
 title: "굿바이코로나 프로젝트를 돌아보면서"
 date: 2020-08-31 17:23:00 -0400
 categories: Projects Goodbye-Corona
 ---
+
 ![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fecdebad8-8eef-4a30-b3d9-42c77ad48885%2FUntitled.png?table=block&id=f6ea0554-1a76-4bc1-b887-f97d08b27f80&width=3070&userId=&cache=v2)
 
 굿바이코로나 프로젝트는 2020.02.23에 시작된 코로나바이러스감염증-19에 대한 정보를 알려주는 서비스 입니다.
