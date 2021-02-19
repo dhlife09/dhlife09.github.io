@@ -16,8 +16,7 @@ $.ajax({
             crossDomain: true,
             dataType: "json",
             success: function (response) {
-                var resp = JSON.parse(response)
-                alert(resp.status);
+                alert(response);
             },
             error: function (xhr, status) {
                 alert("error");
