@@ -14,7 +14,6 @@ $.ajax({
             url: "https://api.corona-19.kr/korea/?serviceKey=7e7c57e81fdf04a63f2a64645c11e1780",
             type: "GET",
             crossDomain: true,
-            data: JSON.stringify(somejson),
             dataType: "json",
             success: function (response) {
                 var resp = JSON.parse(response)
