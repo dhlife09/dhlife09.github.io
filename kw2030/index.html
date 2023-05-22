@@ -186,12 +186,17 @@
         newmarker(3, 37.6192242, 127.0583769, "함지마루(학생식당)", "hamzee.jpg", "광운대학교 복지관 2층", "평일 11:30~14:00", "5,500", "https://www.kw.ac.kr/ko/life/facility11.jsp", "※ 1,000원의 아침밥🍚을 만나보세요!<br>1. 기간 : 2023.05.02.(화) ~11.30.(목) (* 휴일 및 방학 기간 제외)<br>2. 시간 : 평일 8:30 ~ 9:30<br><br>※ PAYCO 포인트카드로 결제 시 결제금액의 10% 를 적립해드려요!", "#한식", "info");
         newmarker(4, 37.6200573, 127.0586526, "카츠3.3", "katsu.jpg", "광운대 80주년기념관 1층 푸드코트", "매일 10:00~21:00", "5,900", "https://pcmap.place.naver.com/restaurant/859267666/menu", "※ 위 제휴 QR코드를 보여주시면 광운대학교 학생에게 공기(밥)을 무료로 제공합니다!", "#일식", "image");
         newmarker(5, 37.6203015, 127.0584836, "마루", "riceenfire.jpg", "광운대학교 앞", "확인필요", "확인필요", "https://dhlife09.github.io/kw2030/images/kimcheon-menu.png", "", "#컵밥", "info");
+        
         if (navigator.geolocation) {
             // 위치 정보를 가져오는데 성공한 경우 실행될 콜백 함수
             function info(position) {
                 var latitude = position.coords.latitude;  // 위도
                 var longitude = position.coords.longitude;  // 경도
-                console.log("위도: " + latitude + ", 경도: " + longitude);
+                console.log("위도: " + latitude + ", 경도: " + longitude);                
+                // 지도 중심을 부드럽게 이동시킵니다
+                // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+                var moveLatLon = new kakao.maps.LatLng(latitude, longitude);
+                map.panTo(moveLatLon);            
             }
 
             // 위치 정보를 가져오는데 실패한 경우 실행될 콜백 함수
