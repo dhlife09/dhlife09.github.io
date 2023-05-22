@@ -260,8 +260,8 @@
                 console.log("위도: " + user_latitude + ", 경도: " + user_longitude);
                 smoothMove(user_latitude, user_longitude);
                 for (var i = 0; i < Object.keys(overlays).length; i++) {
-                    temp_lat = document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lat"]').value;
-                    temp_lng = document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lng"]').value;
+                    temp_lat = document.querySelector('#index' + String(i) + ' input[type="hidden"][id="lat"]').value;
+                    temp_lng = document.querySelector('#index' + String(i) + ' input[type="hidden"][id="lng"]').value;
                     alert(calculateWalkTime(user_latitude, user_longitude, temp_lat, temp_lng));  //here
                 }
             }
