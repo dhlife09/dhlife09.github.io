@@ -252,16 +252,13 @@
         newmarker(4, 37.6200573, 127.0586526, "카츠3.3", "katsu.jpg", "광운대 80주년기념관 1층 푸드코트", "매일 10:00~21:00", "5,900", "https://pcmap.place.naver.com/restaurant/859267666/menu", "※ 위 제휴 QR코드를 보여주시면 광운대학교 학생에게 공기(밥)을 무료로 제공합니다!", "#일식", "image");
         newmarker(5, 37.6203015, 127.0584836, "마루", "riceenfire.jpg", "광운대학교 앞", "확인필요", "확인필요", "https://dhlife09.github.io/kw2030/images/maru-menu.png", "", "#컵밥", "info");
 
-        var user_latitude;
-        var user_longitude;
-
         if (navigator.geolocation) {
             // 위치 정보를 가져오는데 성공한 경우 실행될 콜백 함수
             function info(position) {
                 var user_latitude = position.coords.latitude;  // 위도
                 var user_longitude = position.coords.longitude;  // 경도
                 console.log("위도: " + user_latitude + ", 경도: " + user_longitude);
-                smoothMove(latitude, longitude);
+                smoothMove(user_latitude, user_longitude);
                 for (var i = 0; i < Object.keys(overlays).length; i++) {
                     temp_lat = document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lat"]').value;
                     temp_lng = document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lng"]').value;
