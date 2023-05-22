@@ -103,7 +103,7 @@
             li.innerHTML = `
             <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
             <div id="index` + index + `">
-                <h5>` + Title + `</h5>
+                <h4>` + Title + `</h4> <h5 id="walktime_idx` + index + `"></h5>
                 ` + liTags + `
                 <div class="ellipsis">영업시간: ` + Time + `</div>
                 <div class="ellipsis">평균가격: ` + Price + `원</div>
@@ -264,7 +264,8 @@
                 for (var i = 0; i < Object.keys(overlays).length; i++) {
                     temp_lat = document.querySelector('#index' + String(i) + ' input[type="hidden"][id="lat"]').value;
                     temp_lng = document.querySelector('#index' + String(i) + ' input[type="hidden"][id="lng"]').value;
-                    alert(calculateWalkTime(user_latitude, user_longitude, temp_lat, temp_lng));  //here
+                    temp_time = calculateWalkTime(user_latitude, user_longitude, temp_lat, temp_lng);  //here
+                    document.getElementById("walktime_idx" + String(i)).textContent = temp_time;
                 }
             }
 
