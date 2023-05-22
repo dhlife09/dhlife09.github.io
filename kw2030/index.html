@@ -54,13 +54,15 @@
 
             var js_promotion = 'javascript:swal_promotion(`' + SwalType + '`, `' + Title + '`, `' + Promotion + '`)'    // 프로모션 alert
             if (Promotion != '') {
-                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a> <a href="' + js_promotion + '" class="link">🎁프로모션</a></div>';
+                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a> <a href="' + js_promotion + '" class="link">🎁프로모션</a> ';
             } else {
-                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a></div>';
+                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a> ';
             }
 
             if (SupportTicket) {
-                MenuNPrice = MenuNPrice + `<a href="javascript:ticket(` + Title + `)" class="link">🎫식권</a>`;
+                MenuNPrice = MenuNPrice + `<a href="javascript:ticket(` + Title + `)" class="link">🎫식권</a></div>`;
+            } else {
+                MenuNPrice = MenuNPrice + `</div>`;
             }
 
             var content = '<div class="wrap">' +
