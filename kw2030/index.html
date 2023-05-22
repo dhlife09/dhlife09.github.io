@@ -60,7 +60,7 @@
             }
 
             if (SupportTicket) {
-                MenuNPrice = MenuNPrice + `<a href="javascript:ticket(` + Title + `)" class="link">🎫식권</a></div>`;
+                MenuNPrice = MenuNPrice + `<a href="javascript:ticket('` + Title + `'')" class="link">🎫식권</a></div>`;
             } else {
                 MenuNPrice = MenuNPrice + `</div>`;
             }
@@ -102,10 +102,17 @@
             var li = document.createElement('li');
             li.className = 'list-group-item restaurant-item';
             if (Promotion != '') {
-                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> <span class="badge badge-danger"><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span></div>`;
+                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> <span class="badge badge-danger"><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
             } else {
-                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span></div>`;
+                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> `;
             }
+
+            if (SupportTicket) {
+                liTags = liTags + `<span class="badge badge-danger"><a href="javascript:ticket('` + Title + `'')"  style="color: inherit; text-decoration: inherit;">식권🎫</a></span> `;
+            } else {
+                liTags = liTags + `</div>`;
+            }
+
             li.innerHTML = `
             <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
             <div id="index` + index + `">
