@@ -107,8 +107,8 @@
                 ` + liTags + `
                 <div class="ellipsis">영업시간: ` + Time + `</div>
                 <div class="ellipsis">평균가격: ` + Price + `</div>
-                <input type="hidden" id="idx` + index + `_lat" value="` + lat + `">
-                <input type="hidden" id="idx` + index + `_lng" value="` + lng + `">
+                <input type="hidden" id="lat" value="` + lat + `">
+                <input type="hidden" id="lng" value="` + lng + `">
             </div>
         `;
 
@@ -160,7 +160,8 @@
             }
 
             scrollToTop();
-            smoothMove(document.getElementById('idx' + String(index) + '_lat'), document.getElementById('idx' + String(index) + '_lng'))
+            
+            smoothMove(document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lat"]').value, document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lng"]').value)
             var overlayId = 'overlay_' + String(index);
             overlays[overlayId].setMap(map);
         }
