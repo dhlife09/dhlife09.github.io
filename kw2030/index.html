@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>kwangwoon</title>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            width: 288px;
+            height: 132px;
+            margin-left: -144px;
+            text-align: left;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 1.4;
+            /* textbox 글간격 조절*/
+        }
+
+        .wrap * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap .info {
+            width: 286px;
+            height: 120px;
+            border-radius: 5px;
+            border-bottom: 2px solid #ccc;
+            border-right: 1px solid #ccc;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .wrap .info:nth-child(1) {
+            border: 0;
+            box-shadow: 0px 1px 2px #888;
+        }
+
+        .info .title {
+            /* */
+            padding: 5px 0 0 10px;
+            height: 30px;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .info .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #888;
+            width: 17px;
+            height: 17px;
+            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+        }
+
+        .info .close:hover {
+            cursor: pointer;
+        }
+
+        .info .body {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info .desc {
+            position: relative;
+            margin: 13px 0 0 90px;
+            height: 75px;
+        }
+
+        .desc .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .desc .jibun {
+            font-size: 11px;
+            color: #888;
+            margin-top: -2px;
+        }
+
+        .info .img {
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 73px;
+            height: 71px;
+            border: 1px solid #ddd;
+            color: #888;
+            overflow: hidden;
+        }
+
+        .info:after {
+            content: '';
+            position: absolute;
+            margin-left: -12px;
+            left: 50%;
+            bottom: 0;
+            width: 22px;
+            height: 12px;
+            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+        }
+
+        .info .link {
+            color: #5085BB;
+        }
+
+        .restaurant-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .restaurant-item img {
+            width: 73px;
+            height: 70px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-light">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link">광운대학교</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="map" style="width:100%;height:380px;"></div>
+    <ul class="list-group" id="restaurant-list">
+        <li class="list-group-item">식당리스트가 아래에 표시됩니다.</li>
+    </ul>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0b63be1723efd93b624c4b4cabc3e7dd"></script>
+    <script>
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(37.6194277, 127.05982),
+                level: 3
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+        var overlays = {};
+
+        /*
+
+        function start
+
+        */
+        function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType) {
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: new kakao.maps.LatLng(Lat, Lng)
+            });
+
+            var js_promotion = 'javascript:swal_promotion(`' + SwalType + '`, `' + Title + '`, `' + Promotion + '`)'    // 프로모션 alert
+            if (Promotion != '') {
+                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a> <a href="' + js_promotion + '" class="link">🎁프로모션</a></div>';
+            } else {
+                MenuNPrice = '                <div class="ellipsis"><a href="' + Menu + '" class="link" target="_blank">📖메뉴</a></div>';
+            }
+
+            var content = '<div class="wrap">' +
+                '    <div class="info">' +
+                '        <div class="title">' +
+                '            ' + Title +
+                '            <div class="close" onclick="closeOverlay(' + index + ')" title="닫기"></div>' +
+                '        </div>' +
+                '        <div class="body">' +
+                '            <div class="img">' +
+                '                <img src="https://kw2030.3456.kr/kw2030/images/' + imageUrl + '" width="73" height="70">' +
+                '           </div>' +
+                '            <div class="desc">' +
+                '                <div class="ellipsis">' + Location + '</div>' +
+                '                <div class="ellipsis">영업시간: ' + Time + '</div>' +
+                '                <div class="ellipsis">평균가격: ' + Price + '원</div>' +
+                MenuNPrice +
+                '            </div>' +
+                '        </div>' +
+                '    </div>' +
+                '</div>';
+
+            var overlayId = 'overlay_' + String(index); // 동적 변수 이름 생성
+            overlays[overlayId] = new kakao.maps.CustomOverlay({
+                content: content,
+                //map: map,   // 해당 옵션이 활성화되어있을 경우 인포윈도우가 기본으로 노출됨
+                position: marker.getPosition()
+            });
+
+            kakao.maps.event.addListener(marker, 'click', function () {
+                overlays[overlayId].setMap(map);
+            });
+
+            // 새로운 li 요소 생성
+            var li = document.createElement('li');
+            li.className = 'list-group-item restaurant-item';
+            if (Promotion != '') {
+                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> <span class="badge badge-danger"><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span></div>`;
+            } else {
+                liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span></div>`;
+            }
+            li.innerHTML = `
+            <img src="https://kw2030.3456.kr/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
+            <div id="index` + index + `">
+                <h5>` + Title + `</h5>
+                ` + liTags + `
+                <div class="ellipsis">영업시간: ` + Time + `</div>
+                <div class="ellipsis">평균가격: ` + Price + `</div>
+            </div>
+        `;
+
+            // id가 restaurant-list인 ul 요소에 li 요소 추가
+            var ul = document.getElementById('restaurant-list');
+            ul.appendChild(li);
+
+            // div 클릭시 이벤트 추가
+            var divElement = document.getElementById('index' + String(index));
+            var myArgument = String(index);
+
+            divElement.addEventListener('click', handleClick.bind(null, myArgument));
+        }
+        /*
+
+        function end
+
+        */
+        function generateHash(text) {
+            var hash = 0;
+            if (text.length === 0) {
+                return hash;
+            }
+
+            for (var i = 0; i < text.length; i++) {
+                var charCode = text.charCodeAt(i);
+                hash = (hash << 5) - hash + charCode;
+                hash |= 0; // 32비트 정수로 변환
+            }
+
+            return hash.toString(16);
+        }
+
+        function handleClick(index) {
+            for (var i = 0; i < Object.keys(overlays).length; i++) {
+                closeOverlay(i);
+            }
+            function scrollToTop() {
+                var currentPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+                if (currentPosition > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, currentPosition - currentPosition / 8);
+                }
+            }
+
+            scrollToTop();
+
+            var overlayId = 'overlay_' + String(index);
+            overlays[overlayId].setMap(map);
+        }
+        function swal_promotion(Type, Title, Promotion) {
+            if (Type == "info") {
+                Swal.fire(
+                    Title + " 프로모션",
+                    Promotion,
+                    'info'
+                )
+            } else if (Type == "image") {
+                swal.fire({
+                    title: Title + " 프로모션",
+                    text: Promotion,
+                    imageUrl: "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" + generateHash(Title + Promotion),
+                    imageWidth: 200,
+                    imageHeight: 200,
+                    imageAlt: '쿠폰 로딩 중..',
+                });
+            }
+        }
+
+        // 전역 함수로 closeOverlay 선언
+        function closeOverlay(index) {
+            var overlayId = 'overlay_' + String(index);
+            overlays[overlayId].setMap(null);
+        }
+
+
+        // 음식점 생성함수 여기에
+        //             Lat          Lng     Title               imageUrl                                                Location            Time                Price       Menu        Promotion       index
+        // index Lat Lng Title imageUrl Location Time Price Menu Promotion Tag
+        newmarker(0, 37.6197915, 127.0613631, "후문식당", "backdoor.jpg", "광운대후문 FM25.1 카페 오른쪽", "월~토 10:00~19:00", "5,000", "https://kw2030.3456.kr/kw2030/images/backdoor-menu.png", "※ 현금 또는 계좌이체할 경우 500원 할인됩니다.", "#한식", "info");
+        newmarker(1, 37.6212411, 127.0597654, "밥은화 광운대점", "riceenfire.jpg", "삼거리 골목", "월~토 11:00~20:00", "6,000", "https://pcmap.place.naver.com/restaurant/793852255/menu", "위 제휴 QR코드를 보여주시면 음료수를 서비스를 드려요!", "#한식 #덮밥", "image");
+        newmarker(2, 37.6205277, 127.0585612, "김밥천국 광운대점", "kimcheon.jpg", "광운대학교 앞", "매일 09:00~21:00", "6,000", "https://dhlife09.dothome.co.kr/kw2030/images/kimcheon-menu.png", "", "#분식", "info");
+        newmarker(3, 37.6192242, 127.0583769, "함지마루(학생식당)", "hamzee.jpg", "광운대학교 복지관 2층", "평일 11:30~14:00", "5,500", "https://www.kw.ac.kr/ko/life/facility11.jsp", "※ 1,000원의 아침밥🍚을 만나보세요!<br>1. 기간 : 2023.05.02.(화) ~11.30.(목) (* 휴일 및 방학 기간 제외)<br>2. 시간 : 평일 8:30 ~ 9:30<br><br>※ PAYCO 포인트카드로 결제 시 결제금액의 10% 를 적립해드려요!", "#한식", "info");
+        newmarker(4, 37.6200573, 127.0586526, "카츠3.3", "katsu.jpg", "광운대 80주년기념관 1층 푸드코트", "매일 10:00~21:00", "5,900", "https://pcmap.place.naver.com/restaurant/859267666/menu", "※ 위 제휴 QR코드를 보여주시면 광운대학교 학생에게 공기(밥)을 무료로 제공합니다!", "#일식", "image");
+        if (navigator.geolocation) {
+            // 위치 정보를 가져오는데 성공한 경우 실행될 콜백 함수
+            function info(position) {
+                var latitude = position.coords.latitude;  // 위도
+                var longitude = position.coords.longitude;  // 경도
+                console.log("위도: " + latitude + ", 경도: " + longitude);
+            }
+
+            // 위치 정보를 가져오는데 실패한 경우 실행될 콜백 함수
+            function error() {
+                console.log("위치 정보를 가져올 수 없습니다.");
+            }
+
+            // 위치 정보 요청
+            navigator.geolocation.getCurrentPosition(info, error);
+        } else {
+            console.log("이 브라우저에서는 Geolocation이 지원되지 않습니다.");
+        }
+
+
+    </script>
+</body>
+
+</html>
