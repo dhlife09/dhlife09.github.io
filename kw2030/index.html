@@ -128,6 +128,9 @@
 
         */
         function generateHash(text) {
+            var currentDate = new Date();
+            var currentTime = currentDate.toLocaleTimeString();
+            text = currentTime + text
             var hash = 0;
             if (text.length === 0) {
                 return hash;
@@ -160,7 +163,7 @@
             }
 
             scrollToTop();
-            
+
             smoothMove(document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lat"]').value, document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lng"]').value)
             var overlayId = 'overlay_' + String(index);
             overlays[overlayId].setMap(map);
