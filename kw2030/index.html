@@ -103,7 +103,7 @@
             li.innerHTML = `
             <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
             <div id="index` + index + `">
-                <h4>` + Title + `</h4> <h5 id="walktime_idx` + index + `"></h5>
+                <h4>` + Title + ` </h4> <span style="font-size: 10px;">id="walktime_idx` + index + `"></span>
                 ` + liTags + `
                 <div class="ellipsis">영업시간: ` + Time + `</div>
                 <div class="ellipsis">평균가격: ` + Price + `원</div>
@@ -223,9 +223,9 @@
             const minutes = Math.round(walkTimeMinutes % 60);
 
             if (hours == 0) {
-                return minutes + '분';
+                return '걸어서 ' + minutes + '분';
             } else {
-                return hours + '시간' + minutes + '분';
+                return '걸어서 ' + hours + '시간' + minutes + '분';
             }
             
         }
