@@ -253,7 +253,7 @@
             // 시간과 분으로 분리
             const walkTimeMinutes = walkTimeHours * 60;
             const hours = Math.floor(walkTimeMinutes / 60);
-            const minutes = Math.round(walkTimeMinutes % 60) + 3;
+            const minutes = Math.round(walkTimeMinutes % 60) + 2;   // 보정(2분)
 
             if (hours == 0) {
                 return '걸어서 ' + minutes + '분';
