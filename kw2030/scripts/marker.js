@@ -11,7 +11,7 @@
  * @param {menu} Menu 메뉴판 (이미지) URL
  * @param {promotion} Promotion 프로모션 내용(없을경우 공란)
  * @param {tag} Tag 식당 태그
- * @param {swaltype} SwalType info, image(프로모션용으로 적합)
+ * @param {swaltype} SwalType info, image(프로모션일경우)
  * @param {supportticket} SupportTicket 식권 지원 여부(bool) 
  */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
