@@ -8,20 +8,20 @@
 
 function ticket(shopname) {
     Swal.fire({
-        title: '<strong>' + shopname +' <u>식권</u></strong>',
+        title: '<strong>' + shopname +' 식권🎫</strong>',
         icon: 'info',
         html:
-          '<b>' + shopname + '</b>에서 식권을 통해 더 저렴한 가격으로 이용해보세요.' +
-          '<a href="//sweetalert2.github.io">links</a> ' +
+          '<b>' + shopname + '</b>에서 식권을 통해 더 저렴한 가격으로 이용해보세요!<br>' +
+          '- 학기중: 5%할인제공<br>- 방학중: 10%할인제공' +
           'and other HTML tags',
         showCloseButton: true,
         showCancelButton: true,
         focusConfirm: false,
         confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Great!',
+          '식권구매',
         confirmButtonAriaLabel: 'Thumbs up, great!',
         cancelButtonText:
-          '<i class="fa fa-thumbs-down"></i>',
+          '확인',
         cancelButtonAriaLabel: 'Thumbs down'
       })
 }
