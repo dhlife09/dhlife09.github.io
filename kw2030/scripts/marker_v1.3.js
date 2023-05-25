@@ -1,4 +1,4 @@
-function createSpansWithTag(value) {
+function createSpansWithTag(value) {    // 태그 생성 함수
     var words = value.split(" ");
     var result = '';
   
