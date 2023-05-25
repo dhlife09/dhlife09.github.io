@@ -10,8 +10,6 @@
     <title>kwangwoon</title>
     <!-- scripts here -->
     <script src="https://dhlife09.github.io/kw2030/scripts/location.js"></script>
-    <script src="https://dhlife09.github.io/kw2030/scripts/map.js"></script>
-    <script src="https://dhlife09.github.io/kw2030/scripts/marker.js"></script>
     <script src="https://dhlife09.github.io/kw2030/scripts/tnp.js"></script>
     <script src="https://dhlife09.github.io/kw2030/scripts/walktime.js"></script>
     <!-- scripts end  -->
@@ -25,12 +23,12 @@
             <li class="nav-item">
                 <a class="nav-link" style="color: #751f2a;">
                     <div class="row">
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             <span style="font-size: 14px;">여기요</span>
                             <br>
                             <span style="font-size: 24px;">광운대학교</span>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <img src="https://dhlife09.github.io/kw2030/images/character.png" width="60" height="60">
                         </div>
                       </div>
@@ -47,17 +45,17 @@
     <script>
         /*
 
-kakaomap 렌더링
+        kakaomap 렌더링
 
-*/
-var mapContainer = document.getElementById('map'),
-    mapOption = {
-        center: new kakao.maps.LatLng(37.6194277, 127.05982),
-        level: 3
-    };
+        */
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(37.6194277, 127.05982),
+                level: 3
+            };
 
-var map = new kakao.maps.Map(mapContainer, mapOption);
-var overlays = {};
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+        var overlays = {};
 
         /*
 
