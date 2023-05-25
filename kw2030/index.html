@@ -17,6 +17,7 @@
             "tnp_v" + version + ".js",
             "ad_v" + version + ".js",
             "items_v" + version + ".js",
+            "rate_v" + version + ".js",
         ];
 
         function loadScripts(index) {            
@@ -50,14 +51,18 @@
                     </div>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">aa</a>
-            </li>
         </ul>
     </nav>
     <div id="map" style="width:100%;height:380px;"></div>
     <ul class="list-group" id="restaurant-list">
-        <li class="list-group-item">식당리스트가 아래에 표시됩니다.</li>
+        <li class="list-group-item">
+            <div class="alert alert-success">
+                <span onclick="rateRestaurant();">
+                    <strong>식당 이용 후 적립하세요!</strong> 간단한 평가를 남겨주시면 식권을 모을 수 있어요.
+                </span>
+                
+              </div>
+        </li>
     </ul>
 
     <script type="text/javascript"
