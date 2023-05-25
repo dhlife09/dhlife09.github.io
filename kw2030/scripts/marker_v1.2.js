@@ -3,7 +3,7 @@ function createSpansWithTag(value) {
     var result = '';
   
     words.forEach(function(word) {
-      result += '<span class="badge badge-secondary">' + word + '</span> ';
+      result += '<span class="badge badge-dark">' + word + '</span> ';
     });
   
     return result.trim(); // 공백 제거 후 반환

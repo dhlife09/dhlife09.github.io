@@ -15,7 +15,7 @@ function newAdvertisement(index, imageFileName, title, content, href) {
     li.innerHTML = `
     <img src="https://dhlife09.github.io/kw2030/images/` + imageFileName + `" alt="Ad Image">
     <div id="ad_index` + String(index) + `">
-        <div class="ellipsis">` + title + `</div>
+        <div class="ellipsis"><span class="badge badge-secondary">광고</span> ` + title + `</div>
         <div class="ellipsis">` + content + `</div>
     </div>
 `;
