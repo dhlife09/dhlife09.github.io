@@ -1,11 +1,11 @@
 function rateRestaurant() {
     Swal.fire({
-        title: '<strong>HTML <u>example</u></strong>',
+        title: '식당 이용하고 <strong>식권 적립하기</strong>',
         icon: 'info',
         html:
-            'You can use <b>bold text</b>, ' +
-            '<a href="//sweetalert2.github.io">links</a> ' +
-            'and other HTML tags',
+            '지난번에 이용하신 <b><span href="javascript:void()">미식성</span></b>은 어떠셨나요?<br>' +
+            '식당을 이용하시고 장소에 어울리는 해시태그를 알려주세요.<br>' +
+            '10번 평가 시 식권1장을 드립니다.',
         showCloseButton: true,
         showCancelButton: true,
         focusConfirm: false,
