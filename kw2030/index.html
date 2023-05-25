@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="https://dhlife09.github.io/kw2030/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>kwangwoon</title>
-    <!-- scripts here -->
-    <script src="https://dhlife09.github.io/kw2030/scripts/location.js"></script>
-    <script src="https://dhlife09.github.io/kw2030/scripts/tnp.js"></script>
-    <script src="https://dhlife09.github.io/kw2030/scripts/walktime.js"></script>
-    <!-- scripts end  -->
 </head>
 
 <body>
@@ -40,64 +35,26 @@
     <ul class="list-group" id="restaurant-list">
         <li class="list-group-item">식당리스트가 아래에 표시됩니다.</li>
     </ul>
+
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0b63be1723efd93b624c4b4cabc3e7dd"></script>
+        
+    <!-- custom scripts here -->
         <script type="text/javascript" src="https://dhlife09.github.io/kw2030/scripts/map.js"></script>
         <script type="text/javascript" src="https://dhlife09.github.io/kw2030/scripts/marker.js"></script>
+        <script src="https://dhlife09.github.io/kw2030/scripts/location.js"></script>
+        <script src="https://dhlife09.github.io/kw2030/scripts/tnp.js"></script>
+        <script src="https://dhlife09.github.io/kw2030/scripts/walktime.js"></script>
+        <script src="https://dhlife09.github.io/kw2030/scripts/experience.js"></script>
+    <!-- custom scripts end  -->
+
     <script>
-        function closeAllOverlay() {
-
-            for (var i = 0; i < Object.keys(overlays).length; i++) {
-                closeOverlay(i);
-            }
-        }
-        function handleClick(index) {
-            closeAllOverlay();
-            function scrollToTop() {
-                var currentPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-                if (currentPosition > 0) {
-                    window.requestAnimationFrame(scrollToTop);
-                    window.scrollTo(0, currentPosition - currentPosition / 8);
-                }
-            }
-
-            scrollToTop();
-
-            smoothMove(document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lat"]').value, document.querySelector('#index' + String(index) + ' input[type="hidden"][id="lng"]').value)
-            var overlayId = 'overlay_' + String(index);
-            overlays[overlayId].setMap(map);
-        }
-
-
-
-
-
-
-        function smoothMove(lat, lng) {
-            // 지도 중심을 부드럽게 이동시킵니다
-            // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-            var moveLatLon = new kakao.maps.LatLng(lat, lng);
-            map.panTo(moveLatLon);
-        }
-        // 전역 함수로 closeOverlay 선언
-        function closeOverlay(index) {
-            var overlayId = 'overlay_' + String(index);
-            overlays[overlayId].setMap(null);
-        }
-
-
-        // 음식점 생성함수 여기에
-        //             Lat          Lng     Title               imageUrl                                                Location            Time                Price       Menu        Promotion       index
-        // index Lat Lng Title imageUrl Location Time Price Menu Promotion Tag SupportTicket
         newmarker(0, 37.6197915, 127.0613631, "후문식당", "backdoor.jpg", "광운대후문 FM25.1 카페 오른쪽", "월~토 10:00~19:00", "5,000", "https://dhlife09.github.io/kw2030/images/backdoor-menu.png", "※ 현금 또는 계좌이체할 경우 500원 할인됩니다.", "#한식 #가성비", "info", false);
         newmarker(1, 37.6212411, 127.0597654, "밥은화 광운대점", "riceenfire.jpg", "삼거리에서 오른쪽", "월~토 11:00~20:00", "6,000", "https://pcmap.place.naver.com/restaurant/793852255/menu", "위 제휴 QR코드를 보여주시면 음료수를 서비스로 드려요!", "#한식 #덮밥", "image", false);
         newmarker(2, 37.6205277, 127.0585612, "김밥천국 광운대점", "kimcheon.jpg", "광운대학교 앞", "매일 09:00~21:00", "6,000", "https://dhlife09.github.io/kw2030/images/kimcheon-menu.png", "", "#분식", "info", false);
         newmarker(3, 37.6192242, 127.0583769, "함지마루(학생식당)", "hamzee.jpg", "광운대학교 복지관 2층", "평일 11:30~14:00", "5,500", "https://www.kw.ac.kr/ko/life/facility11.jsp", "※ 1,000원의 아침밥🍚을 만나보세요!<br>1. 기간 : 2023.05.02.(화) ~11.30.(목) (* 휴일 및 방학 기간 제외)<br>2. 시간 : 평일 8:30 ~ 9:30<br><br>※ PAYCO 포인트카드로 결제 시 결제금액의 10% 를 적립해드려요!", "#한식", "info", true);
         newmarker(4, 37.6200573, 127.0586526, "카츠3.3", "katsu.jpg", "광운대 80주년기념관 1층 푸드코트", "매일 10:00~21:00", "5,900", "https://pcmap.place.naver.com/restaurant/859267666/menu", "※ 위 제휴 QR코드를 보여주시면 광운대학교 학생에게 공기(밥)을 무료로 제공합니다!", "#일식", "image", false);
         newmarker(5, 37.6203015, 127.0584836, "마루", "riceenfire.jpg", "광운대학교 앞", "확인필요", "확인필요", "https://dhlife09.github.io/kw2030/images/maru-menu.png", "", "#컵밥", "info", false);
-
-
     </script>
 </body>
 
