@@ -8,22 +8,22 @@
 
 function ticket(shopname) {
     Swal.fire({
-        title: shopname + ' 식권(정기권)',
-        text: "식권 시스템을 이용하면 더 저렴한 가격으로 이용할 수 있습니다.    \n점심_10일권: 49,500원(10%할인)",
+        title: '<strong>' + shopname +' <u>식권</u></strong>',
         icon: 'info',
+        html:
+          '<b>' + shopname + '</b>에서 식권을 통해 더 저렴한 가격으로 이용해보세요.' +
+          '<a href="//sweetalert2.github.io">links</a> ' +
+          'and other HTML tags',
+        showCloseButton: true,
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: '식권 구매/이용'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
-        }
-    })
+        focusConfirm: false,
+        confirmButtonText:
+          '<i class="fa fa-thumbs-up"></i> Great!',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        cancelButtonText:
+          '<i class="fa fa-thumbs-down"></i>',
+        cancelButtonAriaLabel: 'Thumbs down'
+      })
 }
 
 function generateHash(text) {
