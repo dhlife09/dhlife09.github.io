@@ -89,16 +89,14 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     }
 
     if (SupportTicket) {
-        liTags = liTags + `<span class="badge badge-primary"><a href="javascript:ticket('` + Title + `')"  style="color: inherit; text-decoration: inherit;">식권🎫</a></span> `;
-    } else {
-        liTags = liTags + `</div>`;
+        liTags = liTags + `<span class="badge badge-primary"><a href="javascript:ticket('` + Title + `')"  style="color: inherit; text-decoration: inherit;">식권🎫</a></span>`;
     }
 
     li.innerHTML = `
     <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
     <div id="index` + index + `">
         <h4>` + Title + ` <span style="font-size: 15px;" id="walktime_idx` + index + `"></span></h4> 
-        ` + liTags + `
+        ` + liTags + `</div>
         <div class="ellipsis">영업시간: ` + Time + `</div>
         <div class="ellipsis">평균가격: ` + Price + `원</div>
         <input type="hidden" id="lat" value="` + Lat + `">
