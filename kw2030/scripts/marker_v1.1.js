@@ -1,3 +1,14 @@
+function createSpansWithTag(value) {
+    var words = value.split(" ");
+    var result = '';
+  
+    words.forEach(function(word) {
+      result += '<span class="badge badge-secondary">' + word + '</span> ';
+    });
+  
+    return result.trim(); // 공백 제거 후 반환
+}
+
 /**
  * 
  * @param {index} index 인덱스 번호 
@@ -69,10 +80,11 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     // 새로운 li 요소 생성
     var li = document.createElement('li');
     li.className = 'list-group-item restaurant-item';
+    Tag = createSpansWithTag(Tag);
     if (Promotion != '') {
-        liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> <span class="badge badge-danger"><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
+        liTags = `                <div class="ellipsis">` + Tag + ` <span class="badge badge-danger"><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
     } else {
-        liTags = `                <div class="ellipsis"><span class="badge badge-secondary">` + Tag + `</span> `;
+        liTags = `                <div class="ellipsis">` + Tag;
     }
 
     if (SupportTicket) {
@@ -103,3 +115,4 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
 
     divElement.addEventListener('click', handleClick.bind(null, myArgument));
 }
+
