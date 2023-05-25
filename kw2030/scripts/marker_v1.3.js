@@ -82,8 +82,8 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     li.className = 'list-group-item restaurant-item';
     Tag = createSpansWithTag(Tag);
     if (Promotion != '') {
-        liTags = `                <div class="ellipsis">` + Tag + ` <span class="badge badge-danger">
-        <br><a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
+        liTags = `                <div class="ellipsis">` + Tag + `<br><span class="badge badge-danger">
+        <a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
     } else {
         liTags = `                <div class="ellipsis">` + Tag;
     }
