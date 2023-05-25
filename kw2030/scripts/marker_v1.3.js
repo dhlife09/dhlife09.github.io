@@ -83,13 +83,20 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     Tag = createSpansWithTag(Tag);
     if (Promotion != '') {
         liTags = `                <div class="ellipsis">` + Tag + `<br><span class="badge badge-danger">
-        <a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span> `;
+        <a href="` + js_promotion + `" style="color: inherit; text-decoration: inherit;">프로모션🎁</a></span>`;
     } else {
         liTags = `                <div class="ellipsis">` + Tag;
     }
 
     if (SupportTicket) {
-        liTags = liTags + `<span class="badge badge-primary"><a href="javascript:ticket('` + Title + `')"  style="color: inherit; text-decoration: inherit;">식권🎫</a></span>`;
+        liTags = liTags + ` <span class="badge badge-primary"><a href="javascript:ticket('` + Title + `')"  style="color: inherit; text-decoration: inherit;">식권🎫</a></span>`;
+    }
+
+    if (Promotion.includes("신규 오픈")) {
+        liTags = liTags + ` <span class="badge badge-success">신규💖</span>`;
+    }
+    if (Promotion.includes("해피아워")) {
+        liTags = liTags + ` <span class="badge badge-warning">해피아워⌚</span>`;
     }
 
     li.innerHTML = `
