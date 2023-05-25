@@ -25,6 +25,6 @@ function newAdvertisement(index, imageFileName, title, content, href) {
     ul.appendChild(li);
 
     document.getElementById('ad_index' + String(index)).addEventListener('click', function () {
-        window.location.href = href; // 링크 주소 설정
+        window.open(href); // 링크 주소 설정
     });
 }
