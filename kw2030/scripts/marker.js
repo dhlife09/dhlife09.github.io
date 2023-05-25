@@ -1,3 +1,19 @@
+/**
+ * 
+ * @param {index} index 인덱스 번호 
+ * @param {latitude} Lat 위도
+ * @param {longitude} Lng 경도
+ * @param {title} Title 타이틀(식당명)
+ * @param {imageurl} imageUrl 이미지 주소
+ * @param {location} Location 위치
+ * @param {time} Time 영업시간
+ * @param {price} Price 평군 가격대(0,000)
+ * @param {menu} Menu 메뉴판 (이미지) URL
+ * @param {promotion} Promotion 프로모션 내용(없을경우 공란)
+ * @param {tag} Tag 식당 태그
+ * @param {swaltype} SwalType info, image(프로모션용으로 적합)
+ * @param {supportticket} SupportTicket 식권 지원 여부(bool) 
+ */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
     var marker = new kakao.maps.Marker({
         map: map,
