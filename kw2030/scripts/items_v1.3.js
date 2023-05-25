@@ -7,4 +7,4 @@ newmarker(4, 37.6200573, 127.0586526, "카츠3.3", "katsu.jpg", "광운대 80주
 newmarker(5, 37.6203015, 127.0584836, "마루", "noimage.png", "광운대학교 앞", "확인필요", "확인필요", "https://dhlife09.github.io/kw2030/images/maru-menu.png", "", "#컵밥 #가성비 #혼밥", "info", false);
 newmarker(6, 37.6197503, 127.060937, "새빛식당", "noimage.png", "광운대학교 새빛관 13층 푸드코트", "평일 오전11시~오후8시", "5,000", "https://dhlife09.github.com/kw2030/images/noimage.png", "[신규 오픈 및 해피아워 이벤트] 여기요 제휴 QR코드를 보여주시면 10%할인! 2시~4시에 이용하시는 고객에게 음료수 무료제공!", "#가성비 #분식", "image", true);
 newmarker(7, 37.6186687, 127.0572381, "미식성", "noimage.png", "광운대학교 연구관 옆으로 쭉", "모름", "7,000", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#중식 #단체모임 #넓은", "info", false);
-newAdvertisement(1, "noimage.png", "서울 청년 교통비🚌지원", "1998~2004년생 청년에게 최대 10만원", "https://seoul.go.kr");
+newAdvertisement(1, "seoul-logo.jpg", "서울 청년 교통비🚌지원", "1998~2004년생 청년에게 최대 10만원", "https://seoul.go.kr");
