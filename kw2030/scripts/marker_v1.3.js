@@ -96,7 +96,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         liTags = liTags + ` <span class="badge badge-success">신규💖</span>`;
     }
     if (Promotion.includes("해피아워")) {
-        liTags = liTags + ` <span class="badge badge-warning">해피아워🤝</span>`;
+        liTags = liTags + ` <span href="` + js_promotion + `" class="badge badge-warning">해피아워🤝</span>`;
     }
 
     li.innerHTML = `
