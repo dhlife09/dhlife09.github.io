@@ -24,8 +24,6 @@
             script.src = script_baseurl + scripts[index];
             document.body.appendChild(script);
         }
-
-        document.getElementById('this_version').innerText = String(version);
     </script>
     <title>여기요 - 광운대학교</title>
 </head>
@@ -41,7 +39,7 @@
                       <div class="row align-items-center">
                         <div class="col-xs-8">
                           <span class="mt-2" style="font-size: 14px;">여기요</span>
-                          <span class="mt-2" style="font-size: 5px;" id="this_version">version</span>
+                          <span class="mt-2" style="font-size: 5px;" id="version">version</span>
                           <br>
                           <span class="mt-2" style="font-size: 24px;">광운대학교</span>
                         </div>
@@ -63,8 +61,9 @@
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0b63be1723efd93b624c4b4cabc3e7dd"></script>
         
     <!-- custom scripts here -->
-    <script>
-            for (var i = 0; i < Object.keys(scripts).length; i++) {    loadScripts(i); }
+    <script>        
+        document.getElementById('version').innerText = String(version);
+        for (var i = 0; i < Object.keys(scripts).length; i++) {    loadScripts(i); }
     </script>
     <!-- custom scripts end  -->
 </body>
