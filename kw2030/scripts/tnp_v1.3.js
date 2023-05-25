@@ -11,14 +11,14 @@ function ticket(shopname) {
         title: '<strong>' + shopname +' 식권🎫</strong>',
         icon: 'info',
         html:
-          '<b>' + shopname + '</b>에서 식권을 통해 더 저렴한 가격으로 이용해보세요!<br>' +
-          '- 학기중: 5%할인제공<br>- 방학중: 10%할인제공' +
-          'and other HTML tags',
+          '<b>' + shopname + '</b>에서 식권을 통해 더 저렴한 가격으로 이용해보세요!<br><br>' +
+          '학기중에는 <b>최대5%</b>, 방학중에는 <b>최대10%할인된</b> 금액으로 이용할 수 있습니다.<br><br>' +
+          '',
         showCloseButton: true,
         showCancelButton: true,
         focusConfirm: false,
         confirmButtonText:
-          '식권구매',
+          '식권 구매하기',
         confirmButtonAriaLabel: 'Thumbs up, great!',
         cancelButtonText:
           '확인',
