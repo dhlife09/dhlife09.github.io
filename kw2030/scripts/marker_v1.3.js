@@ -26,7 +26,7 @@ function createSpansWithTag(value) {    // 태그 생성 함수
  * @param {supportticket} SupportTicket 식권 지원 여부(bool) 
  */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
-    var imageSrc = "https://dhlife09.github.io/images/marker.png",
+    var imageSrc = "https://dhlife09.github.io/kw2030/images/marker.png",
         imageSize = new kakao.maps.Size(64, 69),
         imageOption = {offset: new kakao.maps.Point(27, 69)};
         
