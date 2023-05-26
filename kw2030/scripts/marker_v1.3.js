@@ -27,7 +27,7 @@ function createSpansWithTag(value) {    // 태그 생성 함수
  */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
     var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
-        imageSize = new kakao.maps.Size(27, 35),
+        imageSize = new kakao.maps.Size(27, 40),
         imageOption = {offset: new kakao.maps.Point(27, 69)};
         
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
