@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://dhlife09.github.io/kw2030/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    <script> /*
         var version = "1.3";
         var script_baseurl = "https://dhlife09.github.io/kw2030/scripts/";
         var scripts = [
@@ -24,7 +24,7 @@
             var script = document.createElement("script");
             script.src = script_baseurl + scripts[index];
             document.body.appendChild(script);
-        }
+        } */
     </script>
     <title>여기요! - 광운대학교</title>
 </head>
@@ -68,10 +68,18 @@
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0b63be1723efd93b624c4b4cabc3e7dd"></script>
         
     <!-- custom scripts here -->
-    <script>        
-        document.getElementById('version').innerText = String(version);
-        for (var i = 0; i < Object.keys(scripts).length; i++) {    loadScripts(i); }
+    <script>
+        //document.getElementById('version').innerText = String(version);
+        //for (var i = 0; i < Object.keys(scripts).length; i++) {    loadScripts(i); }
     </script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/marker_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/map_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/location_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/experience_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/tnp_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/ad_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/items_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/kw2030/scripts/rate_v1.3.js"></script>
     <!-- custom scripts end  -->
 </body>
 
