@@ -9,3 +9,4 @@ newmarker(6, 37.6197503, 127.060937, "새빛식당", "saebit.jpg", "광운대학
 newmarker(7, 37.6186687, 127.0572381, "미식성", "misik.jpg", "광운대학교 연구관 옆으로 쭉", "매일 10:00~21:00", "7,000", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#중식 #단체모임 #넓은", "info", false);
 newAdvertisement(1, "seoul-logo.jpg", "서울 청년 교통비🚌지원", "1998~2004년생 청년에게 최대 10만원", "https://seoul.go.kr");
 newmarker(8, 37.619348, 127.0574993, "샘플1", "noimage.png", "광운대학교 연구관 옆 건물 2층", "평일 오후12시~오후8시", "4,000", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#분식 #친절❤️", "info", false);
+newAdvertisement(2, "kw-logo.jpg", "2학기 참빛설계학기 참가팀 모집", "내가 설계한 프로젝트하고 학점받자!", "https://www.kw.ac.kr/ko/life/notice.jsp?BoardMode=view&DUID=42702&tpage=1&searchKey=1&searchVal=%EC%B0%B8%EB%B9%9B&srCategoryId=");
