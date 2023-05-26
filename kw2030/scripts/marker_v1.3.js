@@ -26,10 +26,19 @@ function createSpansWithTag(value) {    // 태그 생성 함수
  * @param {supportticket} SupportTicket 식권 지원 여부(bool) 
  */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
-    var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
-        imageSize = new kakao.maps.Size(27, 40),
-        imageOption = {offset: new kakao.maps.Point(27, 69)};
-        
+    if (Promotion.includes("신규")) {
+        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
+            imageSize = new kakao.maps.Size(27, 40),
+            imageOption = {offset: new kakao.maps.Point(27, 69)};
+    } else if (Promotion != "") {
+        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_red.png",
+            imageSize = new kakao.maps.Size(27, 40),
+            imageOption = {offset: new kakao.maps.Point(27, 69)};
+    } else {
+        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_blue.png",
+            imageSize = new kakao.maps.Size(27, 40),
+            imageOption = {offset: new kakao.maps.Point(27, 69)};
+    }
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
 
     var marker = new kakao.maps.Marker({
