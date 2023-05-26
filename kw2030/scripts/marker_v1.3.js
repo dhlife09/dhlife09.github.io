@@ -34,12 +34,10 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
             imageSize   = new kakao.maps.Size(27, 40);
     } else if (Promotion != "") {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_red.png",
-            imageSize   = new kakao.maps.Size(27, 40),
-            imageOption = {offset: new kakao.maps.Point(27, 69)};
+            imageSize   = new kakao.maps.Size(27, 40);
     } else {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_blue.png",
-            imageSize = new kakao.maps.Size(27, 40),
-            imageOption = {offset: new kakao.maps.Point(27, 69)};
+            imageSize = new kakao.maps.Size(27, 40);
     }
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
 
