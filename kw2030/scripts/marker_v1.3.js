@@ -120,7 +120,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         liTags = liTags + ` <a href="` + js_promotion + `"><span class="badge badge-warning">해피아워🤝</span></a>`;
     }
 
-    waitingTime = "대기 시간은 약 " + waitingTime + "분 입니다.";
+    waitingTime = "대기 시간: 약 " + waitingTime + "분";
     li.innerHTML = `
     <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
     <div id="index` + index + `">
