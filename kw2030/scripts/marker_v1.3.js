@@ -24,8 +24,9 @@ function createSpansWithTag(value) {    // 태그 생성 함수
  * @param {tag} Tag 식당 태그
  * @param {swaltype} SwalType info, image(프로모션일경우)
  * @param {supportticket} SupportTicket 식권 지원 여부(bool) 
+ * @param {waitingTime} waitingTime 대기시간
  */
-function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket) {
+function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket, waitingTime) {
     if (Promotion.includes("신규")) {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
             imageSize = new kakao.maps.Size(27, 40),
@@ -119,6 +120,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         liTags = liTags + ` <a href="` + js_promotion + `"><span class="badge badge-warning">해피아워🤝</span></a>`;
     }
 
+    waitingTime = "대기 시간은 약 " + waitingTime + "분 입니다.";
     li.innerHTML = `
     <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
     <div id="index` + index + `">
@@ -126,6 +128,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         ` + liTags + `</div>
         <div class="ellipsis">영업시간: ` + Time + `</div>
         <div class="ellipsis">평균가격: ` + Price + `원</div>
+        <div class="ellipsis">` + waitingTime + `</div>
         <input type="hidden" id="lat" value="` + Lat + `">
         <input type="hidden" id="lng" value="` + Lng + `">
     </div>
