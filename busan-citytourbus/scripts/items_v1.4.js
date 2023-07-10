@@ -63,3 +63,4 @@ newmarker(55, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.
 newmarker(56, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
 newmarker(57, 35.2100114, 126.8458791, "집결지(7시40분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
 newmarker(58, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
+newmarker(59, 35.1009643, 129.0291238, "국제시장", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "부산", "info", false, 0);
