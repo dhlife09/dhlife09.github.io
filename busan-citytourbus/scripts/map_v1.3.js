@@ -7,8 +7,9 @@ kakaomap 렌더링
 var mapWrapper = document.getElementById('mapWrapper'); //지도를 감싸고 있는 DIV태그
 
 var mapContainer = document.getElementById('map'),
+    mapCenter = new kakao.maps.LatLng(35.1138657, 129.0399564),
     mapOption = {
-        center: new kakao.maps.LatLng(35.1138657, 129.0399564),
+        center: mapCenter,
         level: 3
     };
 
