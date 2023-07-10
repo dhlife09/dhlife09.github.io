@@ -28,8 +28,23 @@ newmarker(10, 35.1269429, 129.1015538, "평화공원", "noimage.png", "x", "", "
 newmarker(11, 35.0999311, 129.0370273, "광복로", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 newmarker(12, 35.1138657, 129.0399564 , "부산역(도착)", "noimage.png", "도착", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 newmarker(13, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.png", "터미널", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "터미널", "info", false, 0);
-//35.1010192!4d129.0339937 엘리제호텔
 newmarker(14, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
+newmarker(15, 35.1138657, 129.0399564, "부산역(출발)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(16, 35.0968692, 129.0359784, "영도대교(유라리광장)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(17, 35.0807121, 129.0443038, "흰여울 문화마을", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(18, 35.0722344, 129.0552553, "하늘전망대", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(19, 35.0689159, 129.0654513, "영도해녀촌(노을전망대)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(20, 35.0621083, 129.0814542, "태종대", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(21, 35.0787642, 129.0784291, "국립해양박물관", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(22, 35.1029086, 129.1192664, "오륙도스카이워크", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(23, 35.1317634, 129.1134165, "용호만유람선터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(24, 35.1269429, 129.1015538, "평화공원", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(25, 35.077152, 129.0214538, "송도해수욕장(구름산책로)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(26, 35.0972807, 129.0291291, "자갈치,BIFF광장(용두산공원)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+newmarker(27, 35.1138657, 129.0399564, "부산역(도착)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
+
+
+
 // 3초 대기 후 aerrr alert 실행
 setTimeout(function() {
     // 지도에 표시할 선을 생성합니다
@@ -41,15 +56,3 @@ setTimeout(function() {
         strokeStyle: 'solid' // 선의 스타일입니다
     });
 }, 3000);
-
-//35.1272753!4d129.0953989 UN기념공원
-//35.1304939!4d129.0929988 부산박물관
-//35.1317634!4d129.1134165 용호만유람선터미널
-//35.158153!4d129.1159621 광안리해수욕장
-//35.160586!4d129.1399465 마린시티(수영만요트경기장)
-//35.1578814!4d129.1494104 동백섬
-//35.1595823!4d129.161566 해운대해수욕장
-//35.1705303!4d129.1302473 센텀시티(영화의전당)
-//35.1673957!4d129.1369395 시립미술관.벡스코
-//35.1269429!4d129.1015538 평화공원
-//35.0999311!4d129.0370273 광복로
