@@ -58,9 +58,9 @@ newmarker(50, 35.076461, 129.0226323, "송도해수욕장(송도구름산책로)
 newmarker(51, 35.1317634, 129.1134165, "용호만유람선터미널(환승)", "LINE_PRIMARY.png", "레드라인, 블루라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(52, 35.1595823, 129.161566, "해운대해수욕장(환승)", "LINE_PRIMARY.png", "레드라인 블루라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(53, 35.1269429, 129.1015538, "평화공원(환승)", "LINE_PRIMARY.png", "레드라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
+newmarker(57, 35.2100114, 126.8458791, "집결지(7시40분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
+newmarker(58, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
 newmarker(54, 35.1018526, 129.0259122, "부평깡통시장", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "부산", "info", false, 0);
 newmarker(55, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.png", "터미널", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "터미널", "info", false, 0);
 newmarker(56, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
-newmarker(57, 35.2100114, 126.8458791, "집결지(7시40분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
-newmarker(58, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
 newmarker(59, 35.1009643, 129.0291238, "국제시장", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "부산", "info", false, 0);
