@@ -151,7 +151,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
 
     waitingTime = "대기 시간: 약 " + waitingTime + "분";
     li.innerHTML = `
-    <img src="https://dhlife09.github.io/kw2030/images/` + imageUrl + `" alt="Restaurant Image">
+    <img src="https://dhlife09.github.io/busan-citytourbus/images/` + imageUrl + `" alt="Restaurant Image">
     <div id="index` + index + `">
         <h4>` + Title + ` <span style="font-size: 15px;" id="walktime_idx` + index + `"></span></h4> 
         ` + liTags + `</div>
