@@ -61,5 +61,5 @@ function gogogo(target) {
         targetDiv = "index0"
     }
     // targetDiv로 부드럽게 이동
-    targetDiv.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(targetDiv).scrollIntoView();
 }
