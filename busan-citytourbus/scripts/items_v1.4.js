@@ -64,18 +64,3 @@ newmarker(44, 35.076461, 129.0226323, "송도해수욕장(송도구름산책로)
 newmarker(45, 35.1317634, 129.1134165, "용호만유람선터미널(환승)", "LINE_PRIMARY.png", "레드라인, 블루라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(46, 35.1595823, 129.161566, "해운대해수욕장(환승)", "LINE_PRIMARY.png", "레드라인 블루라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(47, 35.1269429, 129.1015538, "평화공원(환승)", "LINE_PRIMARY.png", "레드라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
-
-
-
-
-// 3초 대기 후 aerrr alert 실행
-setTimeout(function() {
-    // 지도에 표시할 선을 생성합니다
-    var polyline = new kakao.maps.Polyline({
-        path: linePath, // 선을 구성하는 좌표배열 입니다
-        strokeWeight: 5, // 선의 두께 입니다
-        strokeColor: '#dd1144', // 선의 색깔입니다
-        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-        strokeStyle: 'solid' // 선의 스타일입니다
-    });
-}, 3000);

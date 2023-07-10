@@ -35,3 +35,13 @@ function closeOverlay(index) {
     var overlayId = 'overlay_' + String(index);
     overlays[overlayId].setMap(null);
 }
+
+function mapViewChanger() {
+    var url = window.location.href;
+    if (url.indexOf('roadview.html') != -1) {
+        window.location.href = 'map.html';
+    } else {
+        window.location.href = 'roadview.html';
+    }
+
+}
