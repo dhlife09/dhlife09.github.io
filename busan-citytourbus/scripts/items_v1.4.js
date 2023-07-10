@@ -64,3 +64,4 @@ newmarker(44, 35.076461, 129.0226323, "송도해수욕장(송도구름산책로)
 newmarker(45, 35.1317634, 129.1134165, "용호만유람선터미널(환승)", "LINE_PRIMARY.png", "레드라인, 블루라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(46, 35.1595823, 129.161566, "해운대해수욕장(환승)", "LINE_PRIMARY.png", "레드라인 블루라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(47, 35.1269429, 129.1015538, "평화공원(환승)", "LINE_PRIMARY.png", "레드라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
+newmarker(48, 35.1018526, 129.0259122, "부평깡통시장", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "부산", "info", false, 0);
