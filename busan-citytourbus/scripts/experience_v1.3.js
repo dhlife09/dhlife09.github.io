@@ -54,11 +54,11 @@ function gogogo(target) {
     } else if (target == "orange") {
         targetDiv = "index26";
     } else if (target == "transfer") {
-        targetDiv = "index49";
+        targetDiv = "index39";
     } else if (target == "etc") {
-        targetDiv = "index54";
+        targetDiv = "index44";
     } else {
-        targetDiv = "index0"
+        targetDiv = "index0";
     }
     // targetDiv로 부드럽게 이동
     document.getElementById(targetDiv).scrollIntoView();

@@ -29,7 +29,7 @@
     <style>
         .map_wrap {overflow:hidden;height:550px}
     </style>
-    <title>부산</title>
+    <title>부산여행 로드뷰</title>
 </head>
 
 <body>
@@ -61,11 +61,11 @@
     <ul class="list-group" id="restaurant-list">
         <li class="list-group-item">
             <button type="button" class="btn btn-primary" onclick="mapViewChanger();">지도/로드뷰 전환</button>
-            <!-- div class="alert alert-success">
-                <span onclick="rateRestaurant();">
-                    <strong>식당 이용 후 <u>식권을 적립해보세요!</u></strong><br>여기를 눌러 지난번에 이용하신 "미식성"은 어떠셨는지 알려주세요.
-                </span>
-              </div -->
+            <button type="button" class="btn btn-danger" onclick="gogogo('red');">레드라인</button>
+            <button type="button" class="btn btn-danger" onclick="gogogo('green');">그린라인</button>
+            <button type="button" class="btn btn-danger" onclick="gogogo('orange');">오렌지라인</button>
+            <button type="button" class="btn btn-danger" onclick="gogogo('transfer');">환승</button>
+            <button type="button" class="btn btn-danger" onclick="gogogo('etc');">기타</button>
         </li>
     </ul>
 
