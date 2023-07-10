@@ -42,8 +42,19 @@ newmarker(24, 35.1269429, 129.1015538, "평화공원", "noimage.png", "-", "", "
 newmarker(25, 35.077152, 129.0214538, "송도해수욕장(구름산책로)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
 newmarker(26, 35.0972807, 129.0291291, "자갈치,BIFF광장(용두산공원)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
 newmarker(27, 35.1138657, 129.0399564, "부산역(도착)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#그린라인", "info", false, 0);
-
-
+newmarker(28, 35.1138657, 129.0399564, "부산역(출발)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(29, 35.076461, 129.0226323, "송도해수욕장(송도구름산책로)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(30, 35.0629603, 129.019136, "암남공원(용궁구름다리)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(31, 35.0879154, 129.0040281, "감천문화마을(감천사거리)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(32, 35.04869, 128.9684473, "다대포해수욕장(몰운대)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(33, 35.0526593, 128.9606945, "아미산전망대", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(34, 35.078505, 128.9515674, "부네치아 장림항", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(35, 35.1079622, 128.9449864, "부산현대미술관(을숙도)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(36, 35.1079622, 128.9449864, "(휴업중)낙동강하구 에코센타", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(37, 35.1031514, 129.0194478, "석당박물관(임시수도기념관)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(38, 35.1006752, 129.0257413, "국제시장(보수동책방골목)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(39, 35.1030982, 129.0327819, "용두산공원(부산근대역사관)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+newmarker(40, 35.1138657, 129.0399564, "부산역(도착)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
 
 // 3초 대기 후 aerrr alert 실행
 setTimeout(function() {
