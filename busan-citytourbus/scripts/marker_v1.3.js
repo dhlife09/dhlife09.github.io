@@ -68,6 +68,8 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         MenuNPrice = MenuNPrice + `</div>`;
     }
 
+    MenuNPrice = "";
+
     var content = '<div class="wrap">' +
         '    <div class="info">' +
         '        <div class="title">' +
@@ -80,7 +82,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         '           </div>' +
         '            <div class="desc">' +
         '                <div class="ellipsis">' + Location + '</div>' +
-        '                <div class="ellipsis">영업시간: ' + Tag + '</div>' +
+        '                <div class="ellipsis"> ' + Tag + '</div>' +
         '                <!-- div class="ellipsis">평균가격: ' + Price + '원</div -->' +
         MenuNPrice +
         '            </div>' +
