@@ -27,9 +27,9 @@ newmarker(9, 35.1673957, 129.1369395, "시립미술관.벡스코", "noimage.png"
 newmarker(10, 35.1269429, 129.1015538, "평화공원", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 newmarker(11, 35.0999311, 129.0370273, "광복로", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 newmarker(12, 35.1138657, 129.0399564 , "부산역(도착)", "noimage.png", "도착", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
-newmarker(13, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.png", "터미널", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "터미널", "info", true, 0);
+newmarker(13, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.png", "터미널", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "터미널", "info", false, 0);
 //35.1010192!4d129.0339937 엘리제호텔
-newmarker(14, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", true, 0);
+newmarker(14, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
 // 3초 대기 후 aerrr alert 실행
 setTimeout(function() {
     // 지도에 표시할 선을 생성합니다
