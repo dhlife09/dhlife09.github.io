@@ -9,6 +9,10 @@ function createSpansWithTag(value) {    // 태그 생성 함수
     return result.trim(); // 공백 제거 후 반환
 }
 
+
+var linePath = [];
+
+
 /**
  * 
  * @param {index} index 인덱스 번호 
@@ -27,6 +31,13 @@ function createSpansWithTag(value) {    // 태그 생성 함수
  * @param {waitingTime} waitingTime 대기시간
  */
 function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu, Promotion, Tag, SwalType, SupportTicket, waitingTime) {
+
+
+    var newLatLng = new kakao.maps.LatLng(Lat, Lng);
+  
+    // 새로운 좌표를 linePath에 추가
+    linePath.push(newLatLng);
+
     if (Promotion.includes("신규")) {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
             imageSize = new kakao.maps.Size(27, 40),
@@ -144,3 +155,15 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
 
     divElement.addEventListener('click', handleClick.bind(null, myArgument));
 }
+
+
+
+
+// 지도에 표시할 선을 생성합니다
+var polyline = new kakao.maps.Polyline({
+    path: linePath, // 선을 구성하는 좌표배열 입니다
+    strokeWeight: 5, // 선의 두께 입니다
+    strokeColor: '#dd1144', // 선의 색깔입니다
+    strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+    strokeStyle: 'solid' // 선의 스타일입니다
+});
