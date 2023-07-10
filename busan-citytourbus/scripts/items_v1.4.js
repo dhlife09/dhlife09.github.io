@@ -15,3 +15,4 @@ newmarker(10, 37.6214627, 127.0590256, "노원설렁탕", "sull.jpg", "광운대
 newAdvertisement(2, "kw-logo.jpg", "2학기 참빛설계학기 참가팀 모집", "내가 설계한 프로젝트하고 학점받자!", "https://www.kw.ac.kr/ko/life/notice.jsp?BoardMode=view&DUID=42702&tpage=1&searchKey=1&searchVal=%EC%B0%B8%EB%B9%9B&srCategoryId=");
 */
 newmarker(0, 35.1138657, 129.0399564 , "부산역(출발)", "noimage.png", "출발", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+//35.1272753!4d129.0953989
