@@ -28,6 +28,18 @@ newmarker(10, 35.1269429, 129.1015538, "평화공원", "noimage.png", "x", "", "
 newmarker(11, 35.0999311, 129.0370273, "광복로", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 newmarker(12, 35.1138657, 129.0399564 , "부산역(도착)", "noimage.png", "도착", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
 
+// 3초 대기 후 aerrr alert 실행
+setTimeout(function() {
+    // 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#dd1144', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+}, 3000);
+
 //35.1272753!4d129.0953989 UN기념공원
 //35.1304939!4d129.0929988 부산박물관
 //35.1317634!4d129.1134165 용호만유람선터미널
