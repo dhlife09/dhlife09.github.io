@@ -61,8 +61,5 @@ function gogogo(target) {
         targetDiv = "index0"
     }
     // targetDiv로 부드럽게 이동
-    var offset = $("#" + targetDiv).offset();
-    $('html, body').animate({
-        scrollTop: offset.top
-    }, 400);
+    targetDiv.scrollIntoView({ behavior: 'smooth' });
 }
