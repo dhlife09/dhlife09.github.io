@@ -38,15 +38,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     // 새로운 좌표를 linePath에 추가
     linePath.push(newLatLng);
 
-    if (Promotion.includes("신규")) {
-        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_green.png",
-            imageSize = new kakao.maps.Size(27, 40),
-            imageOption = {};
-    } else if (SupportTicket) {
-        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_purple.png",
-            imageSize   = new kakao.maps.Size(27, 40),
-            imageOption = {};
-    } else if (Tag != "#레드라인") {
+    if (Tag.includes("#레드라인")) {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_red.png",
             imageSize   = new kakao.maps.Size(27, 40),
             imageOption = {};
