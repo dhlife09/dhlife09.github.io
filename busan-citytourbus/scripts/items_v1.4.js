@@ -15,4 +15,27 @@ newmarker(10, 37.6214627, 127.0590256, "노원설렁탕", "sull.jpg", "광운대
 newAdvertisement(2, "kw-logo.jpg", "2학기 참빛설계학기 참가팀 모집", "내가 설계한 프로젝트하고 학점받자!", "https://www.kw.ac.kr/ko/life/notice.jsp?BoardMode=view&DUID=42702&tpage=1&searchKey=1&searchVal=%EC%B0%B8%EB%B9%9B&srCategoryId=");
 */
 newmarker(0, 35.1138657, 129.0399564 , "부산역(출발)", "noimage.png", "출발", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
-//35.1272753!4d129.0953989
+newmarker(1, 35.1272753, 129.0953989, "UN기념공원", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(2, 35.1304939, 129.0929988, "부산박물관", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(3, 35.1317634, 129.1134165, "용호만유람선터미널", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(4, 35.158153, 129.1159621, "광안리해수욕장", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(5, 35.160586, 129.1399465, "마린시티(수영만요트경기장)", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(6, 35.1578814, 129.1494104, "동백섬", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(7, 35.1595823, 129.161566, "해운대해수욕장", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(8, 35.1705303, 129.1302473, "센텀시티(영화의전당)", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(9, 35.1673957, 129.1369395, "시립미술관.벡스코", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(10, 35.1269429, 129.1015538, "평화공원", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(11, 35.0999311, 129.0370273, "광복로", "noimage.png", "x", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+newmarker(12, 35.1138657, 129.0399564 , "부산역(도착)", "noimage.png", "도착", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#레드라인", "info", false, 0);
+
+//35.1272753!4d129.0953989 UN기념공원
+//35.1304939!4d129.0929988 부산박물관
+//35.1317634!4d129.1134165 용호만유람선터미널
+//35.158153!4d129.1159621 광안리해수욕장
+//35.160586!4d129.1399465 마린시티(수영만요트경기장)
+//35.1578814!4d129.1494104 동백섬
+//35.1595823!4d129.161566 해운대해수욕장
+//35.1705303!4d129.1302473 센텀시티(영화의전당)
+//35.1673957!4d129.1369395 시립미술관.벡스코
+//35.1269429!4d129.1015538 평화공원
+//35.0999311!4d129.0370273 광복로
