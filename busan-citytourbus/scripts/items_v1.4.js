@@ -55,6 +55,10 @@ newmarker(37, 35.1031514, 129.0194478, "석당박물관(임시수도기념관)",
 newmarker(38, 35.1006752, 129.0257413, "국제시장(보수동책방골목)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
 newmarker(39, 35.1030982, 129.0327819, "용두산공원(부산근대역사관)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
 newmarker(40, 35.1138657, 129.0399564, "부산역(도착)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#오렌지라인", "info", false, 0);
+// 35.2100114!4d126.8458791 집결지(7시40분까지 1101동)
+newmarker(41, 35.2100114, 126.8458791, "집결지(7시40분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
+// 35.1603087!4d126.8801307 광주종합버스터미널
+newmarker(42, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
 
 // 3초 대기 후 aerrr alert 실행
 setTimeout(function() {
