@@ -47,7 +47,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
             imageSize = new kakao.maps.Size(27, 40),
             imageOption = {};
     } else if (Tag.includes("#오렌지라인")) {
-        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_yellow.png",
+        var imageSrc = "https://dhlife09.github.io/busan-citytourbus/images/marker_orange.png",
             imageSize = new kakao.maps.Size(27, 40),
             imageOption = {};
     } else {
