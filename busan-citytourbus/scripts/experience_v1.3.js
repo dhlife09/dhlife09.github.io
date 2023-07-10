@@ -39,7 +39,7 @@ function closeOverlay(index) {
 function mapViewChanger() {
     var url = window.location.href;
     if (url.indexOf('roadview.html') != -1) {
-        window.location.href = 'index.html';
+        window.location.href = 'map.html';
     } else {
         window.location.href = 'roadview.html';
     }
