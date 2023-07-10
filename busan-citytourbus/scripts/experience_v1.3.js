@@ -45,3 +45,24 @@ function mapViewChanger() {
     }
 
 }
+
+function gogogo(target) {
+    if (target == "red") {
+        targetDiv = "index0";
+    } else if (target == "green") {
+        targetDiv = "index13";
+    } else if (target == "orange") {
+        targetDiv = "index26";
+    } else if (target == "transfer") {
+        targetDiv = "index49";
+    } else if (target == "etc") {
+        targetDiv = "index54";
+    } else {
+        targetDiv = "index0"
+    }
+    // targetDiv로 부드럽게 이동
+    var offset = $("#" + targetDiv).offset();
+    $('html, body').animate({
+        scrollTop: offset.top
+    }, 400);
+}
