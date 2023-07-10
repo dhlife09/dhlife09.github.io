@@ -102,7 +102,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         '        </div>' +
         '        <div class="body">' +
         '            <div class="img">' +
-        '                <img src="https://dhlife09.github.io/kw2030/images/' + imageUrl + '" width="73" height="70">' +
+        '                <img src="https://dhlife09.github.io/busan-citytourbus/images/' + imageUrl + '" width="73" height="70">' +
         '           </div>' +
         '            <div class="desc">' +
         '                <div class="ellipsis">' + Location + '</div>' +
