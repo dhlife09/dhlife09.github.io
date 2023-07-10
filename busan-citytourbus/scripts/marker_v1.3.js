@@ -46,7 +46,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_purple.png",
             imageSize   = new kakao.maps.Size(27, 40),
             imageOption = {};
-    } else if (Promotion != "") {
+    } else if (Tag != "#레드라인") {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_red.png",
             imageSize   = new kakao.maps.Size(27, 40),
             imageOption = {};
@@ -88,8 +88,8 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         '           </div>' +
         '            <div class="desc">' +
         '                <div class="ellipsis">' + Location + '</div>' +
-        '                <div class="ellipsis">영업시간: ' + Time + '</div>' +
-        '                <div class="ellipsis">평균가격: ' + Price + '원</div>' +
+        '                <div class="ellipsis">영업시간: ' + Tag + '</div>' +
+        '                <!-- div class="ellipsis">평균가격: ' + Price + '원</div -->' +
         MenuNPrice +
         '            </div>' +
         '        </div>' +
@@ -137,9 +137,9 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
     <div id="index` + index + `">
         <h4>` + Title + ` <span style="font-size: 15px;" id="walktime_idx` + index + `"></span></h4> 
         ` + liTags + `</div>
-        <div class="ellipsis">영업시간: ` + Time + `</div>
+        <!-- div class="ellipsis">영업시간: ` + Time + `</div>
         <div class="ellipsis">평균가격: ` + Price + `원</div>
-        <div class="ellipsis">` + waitingTime + `</div>
+        <div class="ellipsis">` + waitingTime + `</div -->
         <input type="hidden" id="lat" value="` + Lat + `">
         <input type="hidden" id="lng" value="` + Lng + `">
     </div>
@@ -159,11 +159,3 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
 
 
 
-// 지도에 표시할 선을 생성합니다
-var polyline = new kakao.maps.Polyline({
-    path: linePath, // 선을 구성하는 좌표배열 입니다
-    strokeWeight: 5, // 선의 두께 입니다
-    strokeColor: '#dd1144', // 선의 색깔입니다
-    strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-    strokeStyle: 'solid' // 선의 스타일입니다
-});
