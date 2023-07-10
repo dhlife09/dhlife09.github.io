@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://dhlife09.github.io/busan-citytourbus/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script> /*
+        var version = "1.3";
+        var script_baseurl = "https://dhlife09.github.io/busan-citytourbus/scripts/";
+        var scripts = [
+            "marker_v" + version + ".js",
+            "map_v" + version + ".js",
+            "location_v" + version + ".js",
+            "experience_v" + version + ".js",
+            "tnp_v" + version + ".js",
+            "ad_v" + version + ".js",
+            "items_v" + version + ".js",
+            "rate_v" + version + ".js",
+        ];
+
+        function loadScripts(index) {            
+            var script = document.createElement("script");
+            script.src = script_baseurl + scripts[index];
+            document.body.appendChild(script);
+        } */
+    </script>
     <style>
         .map_wrap {overflow:hidden;height:550px}
     </style>
@@ -34,6 +54,9 @@
         <div id="mapWrapper" style="width:50%;height:550px;float:left">
             <div id="map" style="width:100%;height:100%"></div> <!-- 지도를 표시할 div 입니다 -->
         </div>
+        <div id="rvWrapper" style="width:50%;height:550px;float:left">
+            <div id="roadview" style="width:100%;height:100%"></div> <!-- 로드뷰를 표시할 div 입니다 -->
+        </div>
     </div>
     <ul class="list-group" id="restaurant-list">
         <li class="list-group-item">
@@ -55,7 +78,7 @@
         //for (var i = 0; i < Object.keys(scripts).length; i++) {    loadScripts(i); }
     </script>
     <script src="https://dhlife09.github.io/busan-citytourbus/scripts/marker_v1.3.js"></script>
-    <script src="https://dhlife09.github.io/busan-citytourbus/scripts/map_v1.3.js"></script>
+    <script src="https://dhlife09.github.io/busan-citytourbus/scripts/roadview.js"></script>
     <script src="https://dhlife09.github.io/busan-citytourbus/scripts/location_v1.3.js"></script>
     <script src="https://dhlife09.github.io/busan-citytourbus/scripts/experience_v1.3.js"></script>
     <!-- script src="https://dhlife09.github.io/busan-citytourbus/scripts/tnp_v1.3.js"></script -->
