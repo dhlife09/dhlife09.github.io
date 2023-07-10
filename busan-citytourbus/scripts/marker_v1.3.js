@@ -50,6 +50,10 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         var imageSrc = "https://dhlife09.github.io/busan-citytourbus/images/marker_orange.png",
             imageSize = new kakao.maps.Size(27, 40),
             imageOption = {};
+    } else if (Tag.includes("#환승")) {
+        var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_purple.png",
+            imageSize = new kakao.maps.Size(27, 40),
+            imageOption = {};
     } else {
         var imageSrc = "https://dhlife09.github.io/kw2030/images/marker_blue.png",
             imageSize = new kakao.maps.Size(27, 40),
