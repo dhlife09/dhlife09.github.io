@@ -107,6 +107,7 @@ function newmarker(index, Lat, Lng, Title, imageUrl, Location, Time, Price, Menu
         '            <div class="desc">' +
         '                <div class="ellipsis">' + Location + '</div>' +
         '                <div class="ellipsis"> ' + Tag + '</div>' +
+        '                <div class="ellipsis"><span target="_blank" href="https://www.google.com/search?q="' + Title + '" class="link" target="_blank">🔍검색</span></div>';
         '                <!-- div class="ellipsis">평균가격: ' + Price + '원</div -->' +
         MenuNPrice +
         '            </div>' +
