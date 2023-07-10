@@ -1,9 +1,21 @@
 function createSpansWithTag(value) {    // 태그 생성 함수
     var words = value.split(" ");
     var result = '';
-  
+    var colortheme = '';
+    if (value.includes("#레드라인")) {
+        var colortheme = 'danger';
+    } else if (value.includes("#그린라인")) {
+        var colortheme = 'success';
+    } else if (value.includes("#오렌지라인")) {
+        var colortheme = 'warning';
+    } else if (value.includes("#환승")) {
+        var colortheme = 'primary';
+    } else {
+        var colortheme = 'dark';
+    }
+
     words.forEach(function(word) {
-      result += '<span class="badge badge-dark">' + word + '</span> ';
+      result += '<span class="badge badge-' + colortheme + '">' + word + '</span> ';
     });
   
     return result.trim(); // 공백 제거 후 반환
