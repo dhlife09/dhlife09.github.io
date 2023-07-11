@@ -54,3 +54,6 @@ newmarker(47, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔
 newmarker(48, 35.1009643, 129.0291238, "국제시장", "noimage.png", "시장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "시장", "info", false, 0);
 newmarker(49, 35.1018526, 129.0259122, "부평깡통시장", "noimage.png", "시장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "시장", "info", false, 0);
 newmarker(50, 35.16183, 129.162093, "도담게스트하우스", "noimage.png", "숙박", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "숙박", "info", false, 0);
+
+newmarker(51, 35.1666425, 129.1574833, "나가하마만게츠", "noimage.png", "둘째날 점심", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "식당", "info", false, 0);
+newmarker(52, 35.1567197, 129.0582386, "가야밀면 서면점", "noimage.png", "첫째날 점심", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "식당", "info", false, 0);
