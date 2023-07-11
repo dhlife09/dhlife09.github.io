@@ -46,8 +46,8 @@ newmarker(41, 35.1317634, 129.1134165, "용호만유람선터미널(환승)", "L
 newmarker(42, 35.1595823, 129.161566, "해운대해수욕장(환승)", "LINE_PRIMARY.png", "레드라인 블루라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 newmarker(43, 35.1269429, 129.1015538, "평화공원(환승)", "LINE_PRIMARY.png", "레드라인, 그린라인 환승장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "#환승", "info", false, 0);
 
-newmarker(44, 35.2100114, 126.8458791, "집결지(7시40분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
-newmarker(45, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
+newmarker(44, 35.2100114, 126.8458791, "집결지(7시45분까지 1101동)", "noimage.png", "-", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
+newmarker(45, 35.1603087, 126.8801307, "광주종합버스터미널", "noimage.png", "8시30분~11시30분", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "광주", "info", false, 0);
 
 newmarker(46, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.png", "터미널", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "터미널", "info", false, 0);
 newmarker(47, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
