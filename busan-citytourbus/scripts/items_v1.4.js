@@ -53,3 +53,4 @@ newmarker(46, 35.1632355, 128.984391, "부산서부(사상)터미널", "noimage.
 newmarker(47, 35.1010192, 129.0339937, "엘리제호텔", "noimage.png", "호텔", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "호텔", "info", false, 0);
 newmarker(48, 35.1009643, 129.0291238, "국제시장", "noimage.png", "시장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "시장", "info", false, 0);
 newmarker(49, 35.1018526, 129.0259122, "부평깡통시장", "noimage.png", "시장", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "시장", "info", false, 0);
+newmarker(50, 35.16183, 129.162093, "도담게스트하우스", "noimage.png", "숙박", "", "0", "https://dhlife09.github.io/kw2030/images/noimage.png", "", "숙박", "info", false, 0);
