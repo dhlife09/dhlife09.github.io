@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "writeups"
-author_profile: true
 permalink: /writeups/
+author_profile: true
 ---
 <div class="posts">
   {% for post in site.categories.writeups %}
