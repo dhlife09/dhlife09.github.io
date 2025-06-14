@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "writeups"
+author_profile: true
 permalink: /writeups/
 ---
 <div class="posts">
