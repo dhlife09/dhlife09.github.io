@@ -1,5 +1,5 @@
 ---
-title: "Writeups"
+title: "writeups"
 layout: archive
 permalink: /writeups/
 author_profile: true
