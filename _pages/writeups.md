@@ -1,6 +1,6 @@
 ---
 title: "Writeups"
-layout: category
+layout: archive
 permalink: /writeups/
 author_profile: true
 ---
