@@ -1,7 +1,6 @@
 ---
 title: "[HSPACE CTF][Web] flagreading"
-collection: writeups
-type: writeups
+categories: writeups
 permalink: /writeups/2024-04-28-hspace-ctf-flagreading
 #venue: "UC San Francisco, Department of Testing"
 date: 2024-04-28
