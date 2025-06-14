@@ -1,9 +1,12 @@
 ---
 layout: category
-title: "writeups"
+title: "Writeups"
 permalink: /writeups/
+taxonomy: writeups
 author_profile: true
+entries_layout: list   # (선택사항) 글 목록 방식
 ---
+
 <div class="posts">
   {% for post in site.categories.writeups %}
     <article class="post">
