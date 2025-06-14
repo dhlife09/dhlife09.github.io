@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: category
 title: "learned"
 author_profile: true
 permalink: /learned/

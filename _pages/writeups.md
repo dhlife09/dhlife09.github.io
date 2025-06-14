@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: category
 title: "writeups"
 permalink: /writeups/
 author_profile: true
