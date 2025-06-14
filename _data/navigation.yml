@@ -9,7 +9,7 @@
 
 main:
   - title: "learned"
-    url: /publications/
+    url: /learned/
 
   - title: "writeups"
     url: /writeups/
