@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: archive
 title: "life"
 author_profile: true
 permalink: /life/
