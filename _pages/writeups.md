@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "writeups"
-permalink: /writeups/
+title: "Talks and presentations"
+permalink: /talks/
 author_profile: true
 ---
 
@@ -11,6 +11,6 @@ author_profile: true
 
 {% endif %}
 
-{% for post in site.talks reversed %}
+{% for post in site.writeups reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
