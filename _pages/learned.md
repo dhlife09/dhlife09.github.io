@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: archive
 title: "learned"
 author_profile: true
 permalink: /learned/
