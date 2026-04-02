@@ -1,7 +1,7 @@
 # Dohyun Park (Future CV)
 >  본 CV는 오픈소스소프트웨어실습 과목에서 작성하는 가상의 CV입니다.
 
-![Dohyun Park's image](https://media.licdn.com/dms/image/v2/D5603AQELPpyUe9y90g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713425092849?e=1776902400&v=beta&t=Y-wSxwjWezyIy6sWeNQ4bNQFfanKmpl2CtBsowlhxiQ)
+![Dohyun Park's image](1713425092849.jpg)
 
 ---
 
